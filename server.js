@@ -65,3 +65,22 @@ connection.connect(function(err) {
         }
       });
   }
+  
+//Create a table to display a department which the user has chose
+  function addDepartment() {
+    inquirer
+      .prompt({
+        type: "input",
+        message: "Please choose the department you want to add?",
+        name: "department"
+      })
+      .then(function(res) {
+        const department = res.department;
+        const query = `INSERT INTO department (name) VALUES("${department}")`;
+        connection.query(query, function(err, res) {
+          if (err) throw err;
+          console.table(res);
+          start();
+        });
+      });
+  }
