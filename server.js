@@ -116,6 +116,49 @@ connection.connect(function(err) {
         });
       });
   }
+// This function will add the employee requested
+  function addEmployee() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          message: "Please type the employee's first name?",
+          name: "firstName"
+        },
+
+        {
+          type: "input",
+          message: "Please type the employee's last name?",
+          name: "lastName"
+        },
+
+        {
+            type: "input",
+            message: "Please type the employee's manager ID?",
+            name: "managerID"
+        },
+
+        {
+          type: "input",
+          message: "Please type the employee's role ID?",
+          name: "roleID"
+        }
+        
+      ])
+      .then(function(res) {
+        const firstName = res.firstName;
+        const lastName = res.lastName;
+        const roleID = res.roleID;
+        const managerID = res.managerID;
+        const query = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUE("${firstName}", "${lastName}", "${roleID}", "${managerID}")`;
+        connection.query(query, function(err, res) {
+          if (err) throw err;
+          console.table(res);
+          start();
+        });
+      });
+  }
+
 
 
 
