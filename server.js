@@ -84,7 +84,7 @@ connection.connect(function(err) {
         });
       });
   }
-
+// The function will add the roles requested
   function addRole() {
     inquirer
       .prompt([
@@ -119,4 +119,3 @@ connection.connect(function(err) {
 
 
 
-  
