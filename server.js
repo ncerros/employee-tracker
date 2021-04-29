@@ -116,7 +116,7 @@ connection.connect(function(err) {
         });
       });
   }
-// This function will add the employee requested
+// This function will add the requested employee
   function addEmployee() {
     inquirer
       .prompt([
@@ -177,4 +177,27 @@ connection.connect(function(err) {
     });
   }
 
+  function viewEmployee() {
+    const query = "SELECT * FROM employee";
+    connection.query(query, function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      start();
+    });
+  }
+  
+  function updateRole() {
+    const query = "SELECT id, first_name, last_name, role_id  FROM employee";
+    connection.query(query, function(err, res) {
+      if (err) throw err;
+      console.table(res);
+      {
+        inquirer.prompt({
+          type: "input",
+          message: "Select the employee that needs to be updated? (use only a number from the id column)",
+          name: "employee"
+        });
+      }
+    });
+  }
 
