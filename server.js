@@ -6,9 +6,9 @@ const consoleTable = require("console.table");
 // Establishing server & PORT
 const connection = mysql.createConnection({
   host: "localhost",
-  port: 8009,
+  port: 8080,
   user: "root",
-  password: "root",
+  password: "norman@1122",
   database: "tracker_DB"
 });
 
