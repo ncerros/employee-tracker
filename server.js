@@ -6,7 +6,7 @@ const consoleTable = require("console.table");
 // Establishing connection with server & PORT
 const connection = mysql.createConnection({
   host: "localhost",
-  port: 8080,
+  port: 3360,
   user: "root",
   password: "norman@1122",
   database: "tracker_DB"
@@ -16,7 +16,7 @@ connection.connect(function(err) {
     if (err) throw err;
     start();
   });
-// This functions will start the inquire prompt
+// This function will start the inquire prompt
   function start() {
     inquirer
       .prompt({

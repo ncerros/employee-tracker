@@ -29,4 +29,4 @@ PRIMARY KEY (id)
 
 );
 
-select * from tracker_DB;
+
