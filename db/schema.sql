@@ -28,3 +28,5 @@ manager_id INTEGER DEFAULT NULL,
 PRIMARY KEY (id)
 
 );
+
+select * from tracker_DB;
