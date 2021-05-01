@@ -11,7 +11,6 @@ View department salary budgets
 Working Application
 
 [Click  here to watch](https://www.youtube.com/watch?v=swiX6Jr_Tg0)
-
 [![Employer-Tracker](https://img.youtube.com/vi/swiX6Jr_Tg0.jpg)](https://www.youtube.com/watch?v=swiX6Jr_Tg0)
 
 Installation
