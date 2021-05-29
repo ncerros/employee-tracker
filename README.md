@@ -1,6 +1,6 @@
  Employee-Tracker
  
-This application will help a business owner to view and manage departments, roles, and employees in the company to keep organized and plan better future. This provides many options and easy to use.
+This application will help a business owner to view departments, roles, and employees and keep organized. The app provides many options and it's easy to use.
 View all employees with the option by role, department, or manager
 Add an employee, role, or department
 Update an employee role or manager
